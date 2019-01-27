@@ -66,3 +66,5 @@ else
   echo "Backup initiated. Check status by running: "
   echo "  aws dynamodb describe-backup --backup-arn $backup_arn --region=$aws_region $aws_profile_arg"
 fi
+
+echo $backup_arn
