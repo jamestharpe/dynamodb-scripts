@@ -1,15 +1,13 @@
 #!/usr/bin/env bash
+set -e
 
 #
-# Lists all DynamoDB tables in the specified environment
+# Lists all DynamoDB tables with names containing the specidied string
 #
 # Example use: 
 #   $ ./list-tables.sh contains region profile
 #
 # You can pass "." as the contains arg to return all tables
-
-
-set -e
 
 contains=$1
 aws_region=$2
