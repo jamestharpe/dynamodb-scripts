@@ -46,7 +46,7 @@ if [ "$wait" == "wait" ]; then
   backup_status="CREATING"
   while [ "$backup_status" = "CREATING" ] # CREATING, AVAILABLE, DELETED
   do
-    echo "... Waiting for backup to complete, backup_status="$backup_status
+    echo "... Waiting for backup of $src_tbl_name to complete, backup_status="$backup_status
     backup_status=$(aws dynamodb describe-backup \
       --backup-arn $backup_arn \
       --region=$aws_region \
